@@ -27,7 +27,7 @@ Public Class Form1
             If numero <= 1 Then
                 esPrimo = False
             Else
-                For i As Integer = 2 To Math.Sqrt(numero)
+                For i As Integer = 2 To numero - 1
                     If numero Mod i = 0 Then
                         esPrimo = False
                         Exit For
@@ -36,9 +36,9 @@ Public Class Form1
             End If
 
             If esPrimo Then
-                LblPrimo.Text = $"{numero} Si, es primo"
+                LblPrimo.Text = $"[{numero}] Si, es primo"
             Else
-                LblPrimo.Text = $"{numero} No, es primo"
+                LblPrimo.Text = $"[{numero}] No, es primo"
             End If
             TextBox1.Clear()
             TextBox1.Focus()
